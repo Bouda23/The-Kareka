@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-accent="blue" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Kareka — Gaming & Entertainment YouTuber Portfolio" />
+  <title>The Kareka</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/webp" href="/static/images/favicon.webp" sizes="any" />
+  <link rel="apple-touch-icon" href="/static/images/favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+
+  <header class="navbar glass" id="navbar">
+    <div class="navbar__inner">
+      <div class="logo">
+        <img src="/static/images/kareka-logo.png" alt="Kareka" class="logo__img" id="siteLogo" />
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#channels" data-i18n="nav_channels">Channels</a>
+        <a href="#videos" data-i18n="nav_videos">Videos</a>
+        <a href="#channels-extras" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="langToggle" aria-label="Toggle language" title="AR / EN">
+          <span id="langLabel">ع</span>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <div id="heroVideoPlayer" class="hero__video-player"></div>
+      <div class="hero__video-overlay"></div>
+    </div>
+    <div class="hero__content reveal">
+      <p class="hero__badge glass" data-i18n="hero_badge">Gaming & Entertainment</p>
+      <h1 class="hero__title">
+        <span data-i18n="hero_title_1">Welcome to</span>
+        <span class="gradient-text" id="heroChannelName">The Kareka</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">
+        I create exciting gaming content featuring the latest games, epic moments, and entertaining gameplay. Join me as we explore different gaming universes together!
+      </p>
+      <div class="hero__cta">
+        <a href="#channels" class="btn btn--primary" data-i18n="hero_cta_channels">Explore Channels</a>
+        <a href="#videos" class="btn btn--glass" data-i18n="hero_cta_videos">Latest Videos</a>
+      </div>
+      <div class="hero__stats glass">
+        <div class="hero__stat">
+          <span class="hero__stat-value" id="heroTotalSubs">0</span>
+          <span class="hero__stat-label" data-i18n="stat_channel_subs">Subscribers</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value" id="heroGoal">1M</span>
+          <span class="hero__stat-label" data-i18n="stat_goal">Next Goal</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-value" id="heroVideos">0</span>
+          <span class="hero__stat-label" data-i18n="stat_videos">Videos</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="about_tag">About Me</span>
+        <h2 class="section-title" data-i18n="about_title">The Creator Behind The Channels</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__card glass reveal">
+          <div class="about__avatar-wrap">
+            <img id="aboutAvatar" src="" alt="The Kareka" class="about__avatar" />
+            <div class="about__avatar-ring"></div>
+          </div>
+          <h3 id="aboutName">The Kareka</h3>
+          <p class="about__role" data-i18n="about_role">Gamer · Otaku · Content Creator</p>
+          <p id="aboutDesc" class="about__desc"></p>
+          <p class="about__location"><i class="fas fa-location-dot"></i> <span data-i18n="about_location">Egypt</span></p>
+        </div>
+        <div class="about__features">
+          <article class="feature-card glass reveal" style="--delay:0.1s">
+            <div class="feature-card__icon"><i class="fas fa-gamepad"></i></div>
+            <h4 data-i18n="feat_gaming_title">Gaming Content</h4>
+            <p data-i18n="feat_gaming_desc">Latest games, epic moments, and hilarious gameplay from Among Us to trending titles.</p>
+          </article>
+          <article class="feature-card glass reveal" style="--delay:0.2s">
+            <div class="feature-card__icon"><i class="fas fa-film"></i></div>
+            <h4 data-i18n="feat_anime_title">Anime & Stories</h4>
+            <p data-i18n="feat_anime_desc">Deep anime summaries and storytelling on Kareka Satoru — for every otaku.</p>
+          </article>
+          <article class="feature-card glass reveal" style="--delay:0.3s">
+            <div class="feature-card__icon"><i class="fas fa-rocket"></i></div>
+            <h4 data-i18n="feat_goal_title">Growth Mission</h4>
+            <p data-i18n="feat_goal_desc">Working together with the community to reach our next subscriber milestone!</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section channels" id="channels">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="channels_tag">My Channels</span>
+        <h2 class="section-title" data-i18n="channels_title">Choose Your Universe</h2>
+        <p class="section-desc" data-i18n="channels_desc">Tap a channel — the whole site transforms with its energy.</p>
+      </div>
+
+      <div class="channel-switcher reveal">
+        <button class="channel-tab active" data-channel="thekareka" id="tabTheKareka">
+          <img class="channel-tab__avatar" id="tabAvatarBlue" src="" alt="" />
+          <span class="channel-tab__name">The Kareka</span>
+          <span class="channel-tab__handle">@TheKareka</span>
+        </button>
+        <div class="channel-switcher__divider">
+          <span class="channel-switcher__pulse"></span>
+        </div>
+        <button class="channel-tab" data-channel="karekasatoru" id="tabKarekaSatoru">
+          <img class="channel-tab__avatar" id="tabAvatarRed" src="" alt="" />
+          <span class="channel-tab__name">Kareka Satoru</span>
+          <span class="channel-tab__handle">@KarekaSatoru</span>
+        </button>
+      </div>
+
+      <div class="channel-stats reveal" id="channelStats"></div>
+
+      <div class="goal-bar glass reveal">
+        <div class="goal-bar__header">
+          <span id="goalLabel" data-i18n="goal_label_1m">Road to 1M</span>
+          <span id="goalPercent">0%</span>
+        </div>
+        <div class="goal-bar__track">
+          <div class="goal-bar__fill" id="goalFill"></div>
+        </div>
+        <p class="goal-bar__hint" data-i18n="goal_hint">Every subscribe counts — thank you for the support!</p>
+      </div>
+
+      <div id="channels-extras" class="channels-extras reveal">
+        <div class="other-social glass">
+          <h3 data-i18n="social_title">Other Social Media</h3>
+          <div class="social-icons" id="socialIcons"></div>
+        </div>
+        <div class="channels-connect glass">
+          <div class="channels-connect__text">
+            <h4 data-i18n="contact_title">Let's Connect</h4>
+            <p data-i18n="contact_desc">For business inquiries, collaborations, or just to say hi!</p>
+          </div>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=starstart195@gmail.com" class="channels-connect__email selectable" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+            starstart195@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section videos" id="videos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="videos_tag">Latest Uploads</span>
+        <h2 class="section-title" data-i18n="videos_title">Featured Videos</h2>
+        <p class="section-desc" id="videosChannelLabel">The Kareka</p>
+      </div>
+      <div class="video-grid" id="videoGrid">
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+        <div class="video-skeleton glass"></div>
+      </div>
+      <div class="videos__footer reveal">
+        <div class="subscribe-anchor">
+          <a id="channelYoutubeLink" href="https://www.youtube.com/@TheKareka" target="_blank" rel="noopener" class="btn btn--primary">
+            <span data-i18n="videos_subscribe">Subscribe on YouTube</span>
+            <i class="fab fa-youtube"></i>
+          </a>
+          <img
+            class="subscribe-pop"
+            src="https://media.discordapp.net/attachments/1265387743853412435/1504616377749868726/Amazed_k_2.png?ex=6a099cf2&is=6a084b72&hm=f5e04be9d5f790638cb05e97801dd40162dfcb4dedb0161ca94f6e9991a3a8a6&format=webp&quality=lossless"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section trailer" id="trailer">
+    <div class="container">
+      <div class="trailer__stage">
+        <img
+          class="trailer__peek"
+          src="https://media.discordapp.net/attachments/1265387743853412435/1504616378567495781/6.png?ex=6a099cf3&is=6a084b73&hm=7a535f8e49b3e4627f5f930f842b59e9be3d9e42601dba08c5149662629d33c3&=&format=webp&quality=lossless"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="trailer__box glass reveal">
+          <div class="trailer__frame">
+            <div id="trailerPlayer" class="trailer__player"></div>
+            <div class="trailer__scanlines" aria-hidden="true"></div>
+            <div class="trailer__corner trailer__corner--tl"></div>
+            <div class="trailer__corner trailer__corner--tr"></div>
+            <div class="trailer__corner trailer__corner--bl"></div>
+            <div class="trailer__corner trailer__corner--br"></div>
+          </div>
+          <div class="trailer__info">
+            <span class="section-tag" data-i18n="trailer_tag">Cinematic Preview</span>
+            <h3 id="trailerTitle" data-i18n="trailer_title">Watch The Action</h3>
+            <p data-i18n="trailer_desc">A hand-picked highlight from the active channel — switch channels to change the vibe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer glass">
+    <div class="footer-content">
+      <div class="footer-social" id="footerSocial"></div>
+      <p>&copy; <span id="year"></span> The Kareka &middot; <span data-i18n="footer_rights">All rights reserved</span></p>
+    </div>
+  </footer>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content glass">
+      <button class="modal__close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div id="modalPlayer" class="modal__player"></div>
+      <h3 id="modalTitle"></h3>
+      <a id="modalYoutubeLink" href="#" target="_blank" rel="noopener" class="btn btn--glass modal__yt-link">
+        <i class="fab fa-youtube"></i>
+        <span data-i18n="modal_watch_yt">Watch on YouTube</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
